@@ -1,0 +1,113 @@
+:root {
+    --black: #0f0f0f;
+    --rose_gold: #FDDCD7;
+    --fb_blue: #4267B2;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica, sans-serif;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+* input {
+    background-color: var(--black);
+    color: var(--rose_gold);
+}
+
+* a {
+    color: var(--rose_gold);
+    font-weight: bold;
+    text-shadow: 0 0 5px black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body {
+    width: 100%;
+    background-color: var(--black);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 50%;
+}
+
+.phone_picture {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
+
+.phone_picture img {
+    height: 70vh;
+}
+
+.login-sign_up-get_the_app {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    width: 50%;
+}
+
+.login, .sign_up {
+    background-color: white;
+    border: 1px solid var(--rose_gold);
+    margin: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 100%;
+}
+
+.with_user {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 10px;
+}
+
+.with_user a {
+    font-weight: none;
+    text-shadow: none;
+    background-color: var(--rose_gold);
+    color: var(--black);
+    width: 100%;
+    padding: 5px 0;
+}
+
+.with_facebook * {
+    color: var(--fb_blue);
+    font-weight: 0;
+    text-shadow: none;
+}
+
+.get_the_app {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    color: var(--rose_gold);
+}
+
+.ios {
+    background-image: url('./img/apple-button.png');
+}
+
+.android {
+    background-image: url('./img/googleplay-button.png');
+}
