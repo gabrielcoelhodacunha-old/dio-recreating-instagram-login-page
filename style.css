@@ -5,41 +5,32 @@
 }
 
 * {
-    margin: 0;
     padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
     font-family: Helvetica, sans-serif;
     font-size: 14px;
-    text-decoration: none;
-}
-
-* input {
-    background-color: var(--black);
-    color: var(--rose_gold);
 }
 
 * a {
-    color: var(--rose_gold);
-    font-weight: bold;
-    text-shadow: 0 0 5px black;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    color: var(--fb_blue);
 }
 
 body {
     width: 100%;
+    min-height: 100vh;
     background-color: var(--black);
     display: flex;
-    align-items: center;
     justify-content: center;
 }
 
-.main {
+.wrapper {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
+    width: 60%;
     height: 100vh;
-    width: 50%;
 }
 
 .phone_picture {
@@ -50,7 +41,7 @@ body {
 }
 
 .phone_picture img {
-    height: 70vh;
+    height: 50rem;
 }
 
 .login-sign_up-get_the_app {
@@ -59,17 +50,38 @@ body {
     justify-content: space-around;
     flex-direction: column;
     width: 50%;
+    min-height: 34rem;
 }
 
 .login, .sign_up {
-    background-color: white;
-    border: 1px solid var(--rose_gold);
-    margin: 15px;
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
     flex-direction: column;
+    background-color: white;
     width: 100%;
+    padding: 1.3rem 0;
+    border: 3px solid var(--rose_gold);
+    border-radius: 4px;
+    margin: 10px;
+}
+
+.login {
+    min-height: 19rem;
+    color: var(--rose_gold);
+}
+
+.login p::before, .login p::after {
+    content: "";
+    display: inline-block;
+    margin: 5px 10px;
+    width: 100px;
+    background-color: var(--rose_gold);
+    border: 1px solid var(--rose_gold);
+}
+
+.login img {
+    height: 3rem;
 }
 
 .with_user {
@@ -78,36 +90,118 @@ body {
     justify-content: center;
     flex-direction: column;
     margin: 10px;
+    width: 250px;
+}
+
+.with_user input {
+    background-color: var(--rose_gold);
+    color: var(--black);
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid var(--black);
+    width: 100%;
+    margin: 3px;
 }
 
 .with_user a {
-    font-weight: none;
-    text-shadow: none;
     background-color: var(--rose_gold);
     color: var(--black);
+    border: 1px solid var(--black);
+    padding: 8px;
     width: 100%;
-    padding: 5px 0;
+    border-radius: 4px;
+    font-weight: bold;
+    text-align: center;
+    margin: 6px;
 }
 
-.with_facebook * {
-    color: var(--fb_blue);
-    font-weight: 0;
-    text-shadow: none;
+.with_facebook {
+    margin-top: 1rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.with_facebook img {
+    height: 20px;
+    width: 20px;
+    margin-right: 5px;
+}
+
+.forgot_password {
+    margin-top: 1rem;
+}
+
+.sign_up {
+    flex-direction: row;
+    justify-content: center;
+}
+
+.sign_up a {
+    margin-left: .3rem;
 }
 
 .get_the_app {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
     width: 100%;
+    padding: 1.3rem 0;
+
     color: var(--rose_gold);
+}
+
+.download {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.ios, .android {
+    height: 38px;
+    width: 129px;
+    background-size: cover;
 }
 
 .ios {
     background-image: url('./img/apple-button.png');
+    margin-right: 10px;
 }
 
 .android {
     background-image: url('./img/googleplay-button.png');
+}
+
+@media (max-width: 1024px) {
+    .wrapper {
+        width: 90%;
+    }
+}
+
+@media (max-width: 650px) {
+    .phone_picture {
+        display: none;
+    }
+
+    .login-sign_up-get_the_app {
+        width: 100%;
+    }
+    
+    .login, .sign_up {
+        background-color: var(--black);
+        border: none;
+        color: var(--rose_gold);
+    }
+
+    .login > img {
+        background-color: var(--rose_gold);
+        border-radius: 4px;
+        padding: 10px;
+        min-width: 10vw;
+        min-height: 7vh;
+    }
 }
