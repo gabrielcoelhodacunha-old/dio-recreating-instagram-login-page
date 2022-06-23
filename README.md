@@ -9,7 +9,7 @@
 </p>
 
 ## About
-This repository is a project challenge that aims the practice of **CSS**, mainly the positioning of elements using **flex containers**.
+This is a project that aims the practice of **CSS**, mainly the positioning of elements using **flex containers**.
 
 The main **CSS** styling properties practiced were:
 - `display: flex` : render element as a **flex container**
